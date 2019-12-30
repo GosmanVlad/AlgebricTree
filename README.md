@@ -1,2 +1,2 @@
 # algebrictree
-Binary Tree
+Binary Tree based on algebric expresion.
