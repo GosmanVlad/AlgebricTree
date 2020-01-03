@@ -34,7 +34,6 @@ int pop(int stiva[], int &nrElementeStiva) {
 
 char ConversieCharOperatori(int operatorScrisInNumar) {
 
-
     switch(operatorScrisInNumar)
     {
         case PLUS:
@@ -86,8 +85,14 @@ void AnalizeazaExpresie(char expresie[])
             push(stiva, ParantezaStanga, nrElementeStiva);
 
         else if(expresie[i] == ')')
+        {
             while(primulElement(stiva) != ParantezaStanga)
-                FormaPostFixata[contorFormaPostfixata++] = ConversieCharOperatori(pop(stiva,nrElementeStiva));
+            {
+                FormaPostFixata[contorFormaPostfixata++] = ConversieCharOperatori(primulElement(stiva));
+                pop(stiva,nrElementeStiva);
+            }
+            pop(stiva, nrElementeStiva);
+        }
 
         else if(strchr(OPERATORI, expresie[i]))
         {
@@ -96,7 +101,7 @@ void AnalizeazaExpresie(char expresie[])
             push(stiva, ConversieIntOperatori(expresie[i]), nrElementeStiva);
         }
     }
-    for(int i=1;i<=nrElementeStiva;i++)
+    while(!isEmpty(stiva,nrElementeStiva))
         FormaPostFixata[contorFormaPostfixata++] = ConversieCharOperatori(pop(stiva, nrElementeStiva));
     contorFormaPostfixata--;
 }

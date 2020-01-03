@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1577648642 source:c:\users\gosma\desktop\proiectip\main.cpp
+1578048704 source:c:\users\gosma\desktop\proiectip\main.cpp
 	"header.hpp"
 	"variables.hpp"
 
@@ -8,7 +8,7 @@
 	<cstring>
 	"defines.hpp"
 
-1577552284 c:\users\gosma\desktop\proiectip\variables.hpp
+1577714354 c:\users\gosma\desktop\proiectip\variables.hpp
 
 1577552382 source:c:\users\gosma\desktop\proiectip\stiva.cpp
 	"variables.hpp"
