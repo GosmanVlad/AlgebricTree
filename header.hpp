@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstring>
 #include "defines.hpp"
+#include "functions.hpp"
 
 using namespace std;
 

@@ -35,10 +35,12 @@
 		<Unit filename="defines.hpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="functions.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="header.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="stiva.cpp" />
-		<Unit filename="variables.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

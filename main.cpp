@@ -1,39 +1,13 @@
 #include "header.hpp"
-#include "variables.hpp"
-
+#include "functions.hpp"
+/*********| VARIABLES |*********/
+int stiva[255];
+int nrElementeStiva;
 int contorFormaPostfixata = 0;
-int nrElementeStiva = 0;
-int stiva[100];
 char FormaPostFixata[caractereMaximeExpresie];
-
-bool isEmpty(int stiva2[], int &nrElementeStiva2) {
-    if(nrElementeStiva == 0)
-        return 1;
-    return 0;
-}
-
-void push(int stiva[],int numar, int &nrElementeStiva) {
-    nrElementeStiva ++;
-    stiva[nrElementeStiva] = numar;
-}
-
-int primulElement(int stiva[]) {
-    return stiva[nrElementeStiva];
-}
-
-int pop(int stiva[], int &nrElementeStiva) {
-    if(isEmpty(stiva, nrElementeStiva))
-        cout<<"Stiva goala";
-    else {
-        int rezultat = primulElement(stiva);
-        nrElementeStiva--;
-        return rezultat;
-    }
-    return 0;
-}
+/******| END - VARIABLES |******/
 
 char ConversieCharOperatori(int operatorScrisInNumar) {
-
     switch(operatorScrisInNumar)
     {
         case PLUS:
@@ -74,7 +48,7 @@ int ConversieIntOperatori(char operatorDeConvertit){
     }
 }
 
-void AnalizeazaExpresie(char expresie[])
+void ConversieFormaPoloneza(char expresie[])
 {
     for(int i=0;i<strlen(expresie);i++)
     {
@@ -109,7 +83,7 @@ int main()
 {
     char expresie[caractereMaximeExpresie];
     cin.getline(expresie, 255);
-    AnalizeazaExpresie(expresie);
+    ConversieFormaPoloneza(expresie);
     cout<<FormaPostFixata;
     return 0;
 }
