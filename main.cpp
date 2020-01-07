@@ -1,5 +1,6 @@
 #include "header.hpp"
 #include "functions.hpp"
+#include "structures.hpp"
 /*********| VARIABLES |*********/
 int stiva[255];
 int nrElementeStiva;
@@ -7,7 +8,7 @@ int contorFormaPostfixata = 0;
 char FormaPostFixata[caractereMaximeExpresie];
 /******| END - VARIABLES |******/
 
-char ConversieCharOperatori(int operatorScrisInNumar) { //Scris de Vlad
+char ConversieCharOperatori(int operatorScrisInNumar) {
     switch(operatorScrisInNumar)
     {
         case PLUS:
@@ -27,7 +28,7 @@ char ConversieCharOperatori(int operatorScrisInNumar) { //Scris de Vlad
             break;
     }
 }
-int ConversieIntOperatori(char operatorDeConvertit){ //Scris de Vlad
+int ConversieIntOperatori(char operatorDeConvertit){
     switch(operatorDeConvertit)
     {
         case '+':
@@ -47,8 +48,9 @@ int ConversieIntOperatori(char operatorDeConvertit){ //Scris de Vlad
             break;
     }
 }
-void ConversieFormaPoloneza(char expresie[]) { //Scris de Vlad
 
+void ConversieFormaPoloneza(char expresie[])
+{
     for(int i=0;i<strlen(expresie);i++)
     {
         if(strchr(NUMBERS, expresie[i]))

@@ -41,6 +41,9 @@
 		<Unit filename="header.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="stiva.cpp" />
+		<Unit filename="structures.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

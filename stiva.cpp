@@ -1,4 +1,3 @@
-/* COD SCRIS DE VLAD */
 #include "header.hpp"
 #include "functions.hpp"
 extern int stiva[255];

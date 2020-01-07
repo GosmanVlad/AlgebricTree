@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1578067249 source:c:\users\gosma\desktop\proiectip\main.cpp
+1578068026 source:c:\users\gosma\desktop\proiectip\main.cpp
 	"header.hpp"
-	"variables.hpp"
+	"functions.hpp"
 
 1578067927 c:\users\gosma\desktop\proiectip\header.hpp
 	<iostream>
@@ -11,8 +11,9 @@
 
 1578067574 c:\users\gosma\desktop\proiectip\variables.hpp
 
-1578067368 source:c:\users\gosma\desktop\proiectip\stiva.cpp
+1578068026 source:c:\users\gosma\desktop\proiectip\stiva.cpp
 	"header.hpp"
+	"functions.hpp"
 
 1576859912 source:c:\users\gosma\desktop\proiectip\header.hpp
 	<iostream>
@@ -22,5 +23,5 @@
 
 1577552138 c:\users\gosma\desktop\proiectip\defines.hpp
 
-1578067927 c:\users\gosma\desktop\proiectip\functions.hpp
+1578068026 c:\users\gosma\desktop\proiectip\functions.hpp
 
