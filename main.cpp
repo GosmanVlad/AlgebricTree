@@ -7,7 +7,7 @@ int contorFormaPostfixata = 0;
 char FormaPostFixata[caractereMaximeExpresie];
 /******| END - VARIABLES |******/
 
-char ConversieCharOperatori(int operatorScrisInNumar) {
+char ConversieCharOperatori(int operatorScrisInNumar) { //Scris de Vlad
     switch(operatorScrisInNumar)
     {
         case PLUS:
@@ -27,7 +27,7 @@ char ConversieCharOperatori(int operatorScrisInNumar) {
             break;
     }
 }
-int ConversieIntOperatori(char operatorDeConvertit){
+int ConversieIntOperatori(char operatorDeConvertit){ //Scris de Vlad
     switch(operatorDeConvertit)
     {
         case '+':
@@ -47,9 +47,8 @@ int ConversieIntOperatori(char operatorDeConvertit){
             break;
     }
 }
+void ConversieFormaPoloneza(char expresie[]) { //Scris de Vlad
 
-void ConversieFormaPoloneza(char expresie[])
-{
     for(int i=0;i<strlen(expresie);i++)
     {
         if(strchr(NUMBERS, expresie[i]))
