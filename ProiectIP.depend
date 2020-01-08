@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1578068026 source:c:\users\gosma\desktop\proiectip\main.cpp
+1578493503 source:c:\users\gosma\desktop\proiectip\main.cpp
 	"header.hpp"
 	"functions.hpp"
+	"structures.hpp"
 
 1578067927 c:\users\gosma\desktop\proiectip\header.hpp
 	<iostream>
@@ -24,4 +25,6 @@
 1577552138 c:\users\gosma\desktop\proiectip\defines.hpp
 
 1578068026 c:\users\gosma\desktop\proiectip\functions.hpp
+
+1578479681 c:\users\gosma\desktop\proiectip\structures.hpp
 

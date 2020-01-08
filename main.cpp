@@ -47,10 +47,9 @@ int ConversieIntOperatori(char operatorDeConvertit){
             return power;
             break;
     }
+    return 0;
 }
-
-void ConversieFormaPoloneza(char expresie[])
-{
+void ConversieFormaPoloneza(char expresie[]) {
     for(int i=0;i<strlen(expresie);i++)
     {
         if(strchr(NUMBERS, expresie[i]))
@@ -80,11 +79,30 @@ void ConversieFormaPoloneza(char expresie[])
         FormaPostFixata[contorFormaPostfixata++] = ConversieCharOperatori(pop(stiva, nrElementeStiva));
     contorFormaPostfixata--;
 }
+Nod* CreareArbore()
+{
+    int LungimeString = strlen(FormaPostFixata) - 1;
+    if(LungimeString == 0)
+        return NULL;
+    Nod* cap = new Nod;
+    if(strchr(NUMBERS, FormaPostFixata[LungimeString]))
+    {
+        cap->value = FormaPostFixata[LungimeString];
+        strcpy(FormaPostFixata + LungimeString, FormaPostFixata + LungimeString + 1);
+        return cap;
+    }
+    cap->value = FormaPostFixata[LungimeString];
+    strcpy(FormaPostFixata + LungimeString, FormaPostFixata + LungimeString + 1);
+    cap->left = CreareArbore();
+    cap->right = CreareArbore();
+}
 int main()
 {
     char expresie[caractereMaximeExpresie];
     cin.getline(expresie, 255);
     ConversieFormaPoloneza(expresie);
-    cout<<FormaPostFixata;
+    cout<<FormaPostFixata<<endl;
+    CreareArbore();
+    cout<<strlen(FormaPostFixata);
     return 0;
 }
