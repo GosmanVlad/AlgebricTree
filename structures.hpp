@@ -2,7 +2,7 @@
 #define STRUCTURES_HPP
 /************************/
 struct Nod {
-    char value;
+    string value;
     Nod *left;
     Nod *right;
 };
