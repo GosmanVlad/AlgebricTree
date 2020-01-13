@@ -68,7 +68,7 @@ void ConversieFormaPoloneza()
             FormaPostFixata[strlen(FormaPostFixata)] = ',';
             i--;
         }
-        else if(expresie[i] == '(')
+        else if(expresie[i] == ' ')
             push(stiva, ParantezaStanga, nrElementeStiva);
 
         else if(expresie[i] == ')')
@@ -117,7 +117,7 @@ Nod* CreareArbore()
             strcpy(FormaPostFixata + LungimeString, FormaPostFixata + LungimeString + 1);
             LungimeString = strlen(FormaPostFixata) - 1;
         }
-        if(FormaPostFixata[LungimeString - 1] != ',')
+        if(strchr(NUMBERS, FormaPostFixata[LungimeString-1]))
         {
             while(FormaPostFixata[LungimeString] != ',')
             {
@@ -150,13 +150,41 @@ void svd(Nod *c) {
         svd(c->right);
     }
 }
+
 int main()
 {
     FormaPostFixata[0] = ',';
     cin.getline(expresie, 255);
     ConversieFormaPoloneza();
-    cout<<FormaPostFixata<<endl;
     Nod* arbore = CreareArbore();
-    svd(arbore);
+   // svd(arbore);
+    //---------------------------------------------------------------------//
+    /*RenderWindow window(VideoMode(1200, 600), "Vizualizator arbore asociat unei expresii algebrice");
+    Text welcome;
+    Font font;
+    font.loadFromFile("Fonts/principal.ttf");
+    welcome.setFont(font);
+    welcome.setCharacterSize(40);
+    welcome.setFillColor(Color::Red);
+    welcome.setString("Vizualizator arbore asociat unei expresii algebrice");
+    welcome.setPosition(250, 0);
+    //---------------------------------------------------------------------//
+    int level = 0;
+    while(window.isOpen())
+    {
+        Event event;
+        while (window.pollEvent(event))
+        {
+            switch(event.type)
+            {
+                case Event::Closed:
+                    window.close();
+                    break;
+            }
+        }
+        window.clear();
+        window.draw(welcome);
+        window.display();
+    }*/
     return 0;
 }

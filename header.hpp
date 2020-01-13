@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <cstring>
+#include <SFML/Graphics.hpp>
 #include "defines.hpp"
 #include "functions.hpp"
 
 using namespace std;
+using namespace sf;
 
 #endif
