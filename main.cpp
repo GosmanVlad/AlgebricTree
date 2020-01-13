@@ -71,7 +71,7 @@ void ConversieFormaPoloneza()
         else if(expresie[i] == ' ')
             push(stiva, ParantezaStanga, nrElementeStiva);
 
-        else if(expresie[i] == ')')
+        else if(expresie[i] == '(')
         {
             while(primulElement(stiva) != ParantezaStanga)
             {
