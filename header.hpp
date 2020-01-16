@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <cstring>
-#include <SFML/Graphics.hpp>
+#include <math.h>
+#include <cstring>
+#include <graphics.h>
 #include "defines.hpp"
 #include "functions.hpp"
 
 using namespace std;
-using namespace sf;
 
 #endif

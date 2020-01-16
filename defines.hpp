@@ -14,6 +14,7 @@
 #define ParantezaStanga 5
 #define power 6
 #define OPERATORI "+-/*^"
+#define ALFABET "abcdefghijklmnopqrstuwxyz"
 
 /**********| OTHERS |**********/
 #define NUMBERS "1234567890"

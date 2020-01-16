@@ -1,13 +1,19 @@
 # depslib dependency file v1.0
-1578859413 source:c:\users\gosma\desktop\proiectip\main.cpp
+1579077990 source:c:\users\gosma\desktop\proiectip\main.cpp
 	"header.hpp"
+	<math.h>
+	<cstring>
+	<graphics.h>
+	<winbgim.h>
 	"functions.hpp"
 	"structures.hpp"
 
-1578839500 c:\users\gosma\desktop\proiectip\header.hpp
+1578941859 c:\users\gosma\desktop\proiectip\header.hpp
 	<iostream>
 	<cstring>
-	<SFML/Graphics.hpp>
+	<math.h>
+	<cstring>
+	<graphics.h>
 	"defines.hpp"
 	"functions.hpp"
 
@@ -23,11 +29,11 @@
 
 1576860510 source:c:\users\gosma\desktop\proiectip\variables.hpp
 
-1578764949 c:\users\gosma\desktop\proiectip\defines.hpp
+1579082479 c:\users\gosma\desktop\proiectip\defines.hpp
 
-1578068026 c:\users\gosma\desktop\proiectip\functions.hpp
+1578942654 c:\users\gosma\desktop\proiectip\functions.hpp
 
-1578759154 c:\users\gosma\desktop\proiectip\structures.hpp
+1578942748 c:\users\gosma\desktop\proiectip\structures.hpp
 
 1525812018 c:\program files (x86)\codeblocks\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
