@@ -1,3 +1,6 @@
+//GRAFICA: CLAUDIU
+//BACK-END: VLAD
+
 #include "header.hpp"
 #include <math.h>
 #include <cstring>
@@ -16,7 +19,7 @@ int LungimeStringAjutator;
 char expresie[caractereMaximeExpresie];
 /******| END - VARIABLES |******/
 
-char ConversieCharOperatori(int operatorScrisInNumar)
+char ConversieCharOperatori(int operatorScrisInNumar) //VLAD
 {
     switch(operatorScrisInNumar)
     {
@@ -38,7 +41,7 @@ char ConversieCharOperatori(int operatorScrisInNumar)
     }
 }
 
-int ConversieIntOperatori(char operatorDeConvertit)
+int ConversieIntOperatori(char operatorDeConvertit) //VLAD
 {
     switch(operatorDeConvertit)
     {
@@ -61,7 +64,7 @@ int ConversieIntOperatori(char operatorDeConvertit)
     return 0;
 }
 
-void ConversieFormaPoloneza()
+void ConversieFormaPoloneza() //VLAD
 {
     for(int i=0; i<strlen(expresie); i++)
     {
@@ -100,7 +103,7 @@ void ConversieFormaPoloneza()
     contorFormaPostfixata--;
 }
 
-void InverseazaStringAjutator()
+void InverseazaStringAjutator() //VLAD
 {
     char c[255];
     strcpy(c, StringAjutator);
@@ -151,7 +154,7 @@ Nod* CreareArbore()   //Vlad
     cap->right = CreareArbore();
     return cap;
 }
-void borduraGrafica(int culoare_j,int culoare_k) // traseaza o bordura grafica la inceput
+void borduraGrafica(int culoare_j,int culoare_k) // Claudiu
 {
     int coordonata_i,raza=10;
     for(coordonata_i=10; coordonata_i<getmaxx(); coordonata_i++)
@@ -165,7 +168,7 @@ void borduraGrafica(int culoare_j,int culoare_k) // traseaza o bordura grafica l
         delay(0.9);//determina cat de mult apare bordura grafica
     }
 }
-void meniuInitial() // un mic intro pana la inceperea proiectului in sine
+void meniuInitial() // Claudiu
 {
     char cmnd[5];
     initwindow(1300,900);
@@ -182,7 +185,7 @@ void meniuInitial() // un mic intro pana la inceperea proiectului in sine
     cleardevice();
     setbkcolor(6);
 }
-void deseneazaCerc(Nod *arbore,int centrux, int centruy, int raza, int adancime, int lungime,int directie)
+void deseneazaCerc(Nod *arbore,int centrux, int centruy, int raza, int adancime, int lungime,int directie) //Claudiu
 {
     // functia primeste ca parametrii arborele, coordonatele centrului cercului, lungimea razei,
     // o lungime care in functie de raza si centru va determina si lungimea liniei , si directia(stanga sau dreapta)
@@ -203,7 +206,7 @@ void deseneazaCerc(Nod *arbore,int centrux, int centruy, int raza, int adancime,
             line(centrux,centruy-raza,centrux-2*lungime-raza,centruy-adancime);
     }
 }
-void deseneazaArbore(Nod *arbore, int centrux, int centruy, int raza, int adancime, int lungime, int directie)
+void deseneazaArbore(Nod *arbore, int centrux, int centruy, int raza, int adancime, int lungime, int directie) //CLAUDIU
 {
     // primeste ca parametrii arborele, coordonatele mijlocului de sus ale graficului
     // adancimea si lungimea influenteaza modul in care vom trasa liniile , iar directia va fi cea care va decide
@@ -216,7 +219,7 @@ void deseneazaArbore(Nod *arbore, int centrux, int centruy, int raza, int adanci
     //functia este recursiva si astfel incepe sa deseneze cu cel mai din stanga elemene al arborelui
     // ca in parcurgerea inordine
 }
-void arboreRandom(int numar_random)
+void arboreRandom(int numar_random) //CLAUDIU
 {
     if(numar_random==1)
         strcpy(expresie, "1+2");
